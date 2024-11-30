@@ -1,0 +1,52 @@
+.last_posts {
+    background: $color_white;
+    margin: 0 0 2em 0;
+    padding: 6em 0.7em 6em 0.7em;
+
+    .last_posts_header {
+        margin: 0 0 1em 0;
+        text-align: center;
+
+        p {
+            display: block;
+            font-size: $font-size-big;
+            margin: 1em 0 2em 0;
+            line-height: 1.5em;
+            text-align: inherit;
+        }
+    }
+
+    .last_posts_container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .last_posts_row {
+        display: flex;
+        gap: 50px;
+        justify-content: space-between;
+        align-items: stretch;
+        @include display-flex-to-block('mobile');
+
+        .last_post {
+            flex: 1;
+            min-width: 200px;
+            max-width: 33%;
+            @include media-query('mobile') {
+                max-width: 100%;
+                margin-bottom: 50px;
+            }
+
+            .image {
+                display: block;
+                width: 100%;
+                margin: 0 0 3em 0;
+            }
+        }
+
+        h3 {
+            margin: 0 0 1em 0;
+            text-align: center;
+        }
+    }
+}

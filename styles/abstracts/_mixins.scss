@@ -1,0 +1,41 @@
+@mixin media-query($breakpoint) {
+    @if $breakpoint == 'mobile' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'tablet' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'desktop' {
+        @media (min-width: 1025px) {
+            @content;
+        }
+    }
+    @else {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+@mixin display-flex-to-block($breakpoint) {
+    @if $breakpoint == 'mobile' {
+        @media (max-width: 768px) {
+            @content;
+            display: block; 
+        }
+    }
+    @else if $breakpoint == 'tablet' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: 1025px) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.post-preview {
+    padding: 0 4em 4em 4em;
+    background: $color_white;
+    margin: 0 0 2em 0;
+    @include media-query('mobile') {
+        padding: 0 0.7em 4em 0.7em;
+    }
+
+    .image {
+        margin: 0 0 4em 0;
+        display: block;
+        @include media-query('mobile') {
+            margin-bottom: 1em;
+        }
+    }
+
+    div {
+        text-align: center;
+
+        p {
+            font-size: $font-size-big;
+            margin: 1em 0 2em 0;
+            line-height: 1.5em;
+        }
+    }
+
+
+}

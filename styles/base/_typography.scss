@@ -1,0 +1,85 @@
+body {
+  font-family: $font;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color_grey;
+  background: $color_body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  color: $color_brown;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+
+  @include media-query('mobile') {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+p {
+  font-weight: 300;
+}
+
+.icon:before {
+  font-family: 'FontAwesome';
+}
+
+hr {
+  position: relative;
+  display: block;
+  border: 0;
+  top: 4.5em;
+  margin-bottom: 9em;
+  height: 6px;
+  border-top: solid 1px $color_grey;
+  border-bottom: solid 1px $color_grey;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    display: block;
+    width: 1px;
+    height: 21px;
+    background: rgba(128, 128, 128, 0.2);
+  }
+
+  &:before {
+    left: -1px;
+  }
+
+  &:after {
+    right: -1px;
+  }
+
+}
